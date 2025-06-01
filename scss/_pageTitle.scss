@@ -1,0 +1,28 @@
+.pageTypeDiv {
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .pageTypeH1 {
+      position: relative;
+      font-family: "Raleway", sans-serif;
+      font-weight: 1000;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 2.4rem;
+      z-index: 1;
+      color: $mainBlue700;
+
+      .pageTypeBackground {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 60%;
+              height: 50%;
+              z-index: -1;
+              background-color: $lilac500;
+            
+      }
+    }
+  }

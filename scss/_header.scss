@@ -1,0 +1,52 @@
+.navUl a.active {
+    
+    font-weight: 1000;
+  }
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $mainBlue400;
+    // border-bottom: 5px solid $mainBlue500;
+    // border-top: 5px solid $mainBlue500;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+
+    .navBar {
+        max-width: 800px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .navUl {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+            gap: 40px;
+
+            li {
+                            font-family: "Raleway", sans-serif;
+                            font-weight: 400;
+                            letter-spacing: 6px;
+                            color: $Neutral50;
+                            text-transform: uppercase;
+            }
+            
+        }
+    }
+}
+
+.navUl a, .navUl li {
+    display: inline-block;
+    font-weight: 300;
+  }
+
+  .contactLi a {
+    text-align: right;
+}
+

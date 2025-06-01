@@ -1,0 +1,400 @@
+// Cleaned & Organized SCSS
+
+// ------------------------
+// GLOBAL RESET & KEYFRAMES
+// ------------------------
+* {
+  box-sizing: border-box;
+  margin: 0; 
+}
+
+.heroTitle {
+  font-size: 5rem;
+  letter-spacing: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  transition: color 0.3s ease;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// ------------------------
+// BACKGROUND LAYERS
+// ------------------------
+.background-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: url("../assets/images/bg-muted.PNG");
+  background-size: cover;
+  background-position: center;
+}
+
+.intense-mask-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../assets/images/bg-intense.PNG");
+  background-size: cover;
+  background-position: center;
+  mask-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 1) 50px,
+    rgba(0, 0, 0, 0.8) 100px,
+    rgba(0, 0, 0, 0.6) 160px,
+    rgba(0, 0, 0, 0.4) 220px,
+    rgba(0, 0, 0, 0.2) 260px,
+    rgba(0, 0, 0, 0.1) 285px,
+    rgba(0, 0, 0, 0) 350px
+  );
+  mask-repeat: no-repeat;
+  mask-size: 860px 860px;
+  pointer-events: none;
+  transition: mask-position 0.1s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+@media (max-width: 700px) {
+* {
+
+}
+
+.carousel {
+  display: none !important;
+}
+.reverseForPhone {
+  flex-direction: column-reverse !important;
+}
+
+.rightImgDiv {
+  .projectImg{
+
+    border-left: 15px solid $lilac500 !important;
+  }
+}
+
+.projectImg {
+  margin-bottom: 20px;
+  width: 100% !important;
+  border-top: 15px solid $lilac500 !important;
+  border-right: 10px solid $lilac500 !important;
+  border-bottom: 15px solid $lilac500 !important;
+}
+.projectImgDiv {
+  width: 100% !important;
+}
+.projectDiv {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 !important;
+  width: 100% !important;
+  padding: 20px;
+  border-bottom: 1px solid $mainBlue500;
+
+  .projectText {
+    padding: 10px !important;
+    width: 100% !important;
+  }
+}
+ .linaH1,
+ .junoraH1 {
+  font-size: 4.5rem;
+  letter-spacing: 10px;
+ }
+
+ .headerDiv {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .h1Div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+ .mainContainer {
+  padding: 15px !important;
+  gap: 20px;
+
+ }
+.sloganH2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+}
+
+.header {
+  .navBar {
+    .navUl {
+      gap: 10px !important;
+      li {
+        font-size: 0.7rem !important;
+      }
+    }
+  }
+}
+//  .navBar {
+//   position: fixed;
+//   bottom: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 70px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//  }
+.contentWrapper {
+
+  // max-width: 800px;
+}
+#aboutContent {
+  // flex-direction: column;
+  .boxes {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  //  max-width: 800px;
+
+  .box1 {
+    width: 100%;
+  }
+
+    .headerContent {
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      padding: 15px;
+    }
+
+    .box2 {
+      justify-content: center;
+    }
+  }
+}
+.contactLinks {
+  margin-bottom: 10px !important;
+}
+.liaLink {
+  margin-bottom: 60px !important;
+}
+
+#junoDiv {
+  margin: 0;
+  padding: 20px;
+  row-gap: 20px !important;
+  flex-direction: column-reverse;
+
+  .junoExamplesText {
+    width: 100% !important;
+    p{
+
+      width: 100% !important;
+    }
+  }
+
+  .imgJuno {
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+}
+
+
+// ------------------------
+// BODY AND MAIN STRUCTURE
+// ------------------------
+.indexBody {
+  width: 100vw;
+  height: 100vh;
+
+  .mainIndex {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .mainContainer {
+      background-color: $beige500;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      border-top-right-radius: 50px;
+
+      .headerDiv {
+        display: flex;
+
+        #logoImg {
+          width: 140px;
+          height: auto;
+          flex-shrink: 0;
+          margin-right: 20px;
+          object-fit: contain;
+          animation: fadeInPop 1.7s ease-out forwards;
+        }
+
+        .h1Div {
+          .linaH1 {
+            font-family: "Raleway", sans-serif;
+            font-weight: 500;
+            color: $mainBlue500;
+            opacity: 0;
+            animation: fadeInLeft 1.7s ease-out forwards;
+            animation-delay: 0.3s;
+          }
+
+          .junoraH1 {
+            font-family: "Raleway", sans-serif;
+            font-weight: 300;
+            color: $mainBlue500;
+            opacity: 0;
+            animation: fadeInRight 1.7s ease-out forwards;
+            animation-delay: 0.6s;
+          }
+        }
+      }
+
+      .sloganDiv {
+        h2 {
+          padding-bottom: 10px;
+          font-family: "Raleway", sans-serif;
+          font-size: 1rem;
+          font-weight: 200;
+          letter-spacing: 30px;
+          color: $mainBlue500;
+          border-bottom: 1px solid $mainBlue500;
+          animation: fadeInPop 1.7s ease-out forwards;
+
+          .frontendH2 {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .viewWorkBtnDiv {
+      margin-top: 40px;
+
+      #viewWorkBtn {
+        padding: 12px 24px;
+        font-family: "Raleway", sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $mainBlue500;
+        background-color: $beige500;
+        border: 1px solid $mainBlue500;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .arrowIcon {
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          background-color: $mainBlue500;
+          color: $beige500;
+
+          .arrowIcon {
+            transform: translateY(2px);
+          }
+
+          transform: scale(1.05);
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+    }
+  }
+}
+
+// ------------------------
+// HOVER ANIMATIONS
+// ------------------------
+.linaH1 span,
+.junoraH1 span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.linaH1 span:hover,
+.junoraH1 span:hover {
+  transform: scale(1.2);
+}
+
+.sloganH2 span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.sloganH2 span:hover {
+  transform: scale(1.1);
+}
